@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/prettify.css" />
+
+  </head>
+
+  <body>
+    <div class = 'middle'>
+      <h1>Touched by time</h1>
+      <button type="button" onclick="hapticOn()">haptics on</button>
+    </div>
+      <div id = "onArm">
+              <div class="demo-box">
+              			<div id="demo1">1</div>
+              </div>
+              <div class="demo-box">
+                    <div id="demo2">2</div>
+              </div>
+              <div class="demo-box">
+              			<div id="demo3">3</div>
+              </div>
+              <div class="demo-box">
+                    <div id="demo4">4</div>
+              </div>
+              <div class="demo-box">
+              			<div id="demo5">5</div>
+              </div>
+              <div class="demo-box">
+                    <div id="demo6">6</div>
+              </div>
+      </div>
+
+      <script src="js/jquery-1.7.2.min.js"></script>
+      <script src="js/jquery.jrumble.1.3.min.js"></script>
+      <script src="js/prettify.js"></script>
+      <script>
+      function hapticOn(){
+        $('#demo6, #demo5, #demo4, #demo3, #demo2, #demo1').jrumble({
+          speed: 0
+        });
+      }
+      //=======================1111111
+      var demo1Start = function(){
+      $('#demo1').trigger('startRumble');
+      setTimeout(demo1Stop, 100);
+      };
+
+      var demo1Stop = function(){
+      $('#demo1').trigger('stopRumble');
+      setTimeout(demo1Start, 100);
+      };
+
+      demo1Start();
+
+      //======================2222222
+      var demo2Start = function(){
+      $('#demo2').trigger('startRumble');
+      setTimeout(demo2Stop, 200);
+      };
+
+      var demo2Stop = function(){
+      $('#demo2').trigger('stopRumble');
+      setTimeout(demo2Start, 200);
+      };
+
+      demo2Start();
+
+      //===========================33333333
+      var demo3Start = function(){
+      $('#demo3').trigger('startRumble');
+      setTimeout(demo3Stop, 300);
+      };
+
+      var demo3Stop = function(){
+      $('#demo3').trigger('stopRumble');
+      setTimeout(demo3Start, 300);
+      };
+
+      demo3Start();
+
+      //==========================444444
+      var demo4Start = function(){
+      $('#demo4').trigger('startRumble');
+      setTimeout(demo4Stop, 400);
+      };
+
+      var demo4Stop = function(){
+      $('#demo4').trigger('stopRumble');
+      setTimeout(demo4Start, 400);
+      };
+
+      demo4Start();
+
+      //==========================555555555
+
+      var demo5Start = function(){
+      $('#demo5').trigger('startRumble');
+      setTimeout(demo5Stop, 500);
+      };
+
+      var demo5Stop = function(){
+      $('#demo5').trigger('stopRumble');
+      setTimeout(demo5Start, 500);
+      };
+
+      demo5Start();
+      //==========================666666666
+
+      var demo6Start = function(){
+      $('#demo6').trigger('startRumble');
+      setTimeout(demo6Stop, 600);
+      };
+
+      var demo6Stop = function(){
+      $('#demo6').trigger('stopRumble');
+      setTimeout(demo6Start, 600);
+      };
+
+      demo6Start();
+
+
+      //hover option
+      $('#demo6, #demo5, #demo4, #demo3, #demo2, #demo1').hover(function(){
+      $(this).trigger('startRumble');
+        }, function(){
+      $(this).trigger('stopRumble');
+        });
+
+
+      </script>
+  </body>
+</html>
