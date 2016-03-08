@@ -139,6 +139,7 @@ a:hover, a:active {
 
 .demo-box div {
 	background: #ff2727;
+	border-radius: 25px;
 	color: #fff;
 	font-size: 10px;
 	height: 30px;
